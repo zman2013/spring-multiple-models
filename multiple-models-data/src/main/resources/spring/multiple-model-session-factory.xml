@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <!-- 事务管理器 -->
+    <bean id="demo_txManager"
+          class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="demo_dataSource"/>
+    </bean>
+
+    <tx:annotation-driven transaction-manager="demo_txManager"/>
+
+    <!-- 在使用mybatis时 spring使用sqlsessionFactoryBean 来管理mybatis的sqlsessionFactory -->
+    <!-- 创建sqlsessionFactory 并指定数据源 -->
+    <bean id="demo_sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="demo_dataSource"/>
+        <property name="typeAliasesPackage"
+                  value="com.zmannotes.spring.data.domain"/>
+        <!-- 配置mybatis配置文件的位置 -->
+        <property name="configLocation" value="classpath:demo-mybatis-config.xml"/>
+        <!-- 配置扫描Mapper XML的位置 -->
+        <property name="mapperLocations">
+            <list>
+                <value>classpath:mybatis/demo/*.xml</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- 使用MapperScannerConfiguer 扫描来实现 -->
+    <!-- 这里指定了要扫描的映射接口的路径 -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage">
+            <value>
+                com.zmannotes.spring.data.dao
+            </value>
+        </property>
+        <property name="sqlSessionFactoryBeanName" value="demo_sqlSessionFactory"/>
+    </bean>
+
+</beans>

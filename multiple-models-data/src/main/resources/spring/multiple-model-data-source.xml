@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- dbcp2 数据源 -->
+	<bean id="demo_dataSource" class="org.apache.commons.dbcp2.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="${account.db.url}" />
+		<property name="username" value="${account.db.username}" />
+		<property name="password" value="${account.db.password}" />
+		<property name="connectionInitSqls">
+			<list>
+				<value>set names utf8mb4;</value>
+			</list>
+		</property>
+	</bean>
+
+</beans>
