@@ -1,8 +1,8 @@
 #!/bin/sh
 
-#group名称，例:com.weidian.pay
+#group名称，例:com.zman.demo
 groupName=$1
-#项目名称，例：pay-channel
+#项目名称，例：demo-channel
 projectName=$2
 
 
