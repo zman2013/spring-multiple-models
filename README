@@ -1,2 +1,7 @@
-微信资源基础服务
-负责管理微信公众号、开发者账号的基础信息，并对外提供访问微信接口的凭证。
+#group名称，例:com.zman.demo
+
+groupName=$1
+
+#项目名称，例：demo-channel
+
+projectName=$2
