@@ -74,16 +74,6 @@
             <version>${log4j2.version}</version>
         </dependency>
         <!-- common -->
-        <dependency>
-            <groupId>com.koudai.common</groupId>
-            <artifactId>common-lib</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.apache.logging.log4j</groupId>
-                    <artifactId>log4j-api</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
 
     </dependencies>
 

@@ -1,4 +1,4 @@
-package com.zmannotes.spring.data.service;
+package com.zmannotes.spring.service;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

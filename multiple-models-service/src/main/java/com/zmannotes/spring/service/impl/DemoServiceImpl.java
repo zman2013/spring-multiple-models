@@ -1,6 +1,6 @@
-package com.zmannotes.spring.data.service.impl;
+package com.zmannotes.spring.service.impl;
 
-import com.zmannotes.spring.data.service.DemoService;
+import com.zmannotes.spring.service.DemoService;
 import org.springframework.stereotype.Service;
 
 /**
@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class DemoServiceImpl implements DemoService{
-    @Override
     public String encrypt(String data) {
         return data.toLowerCase();
     }

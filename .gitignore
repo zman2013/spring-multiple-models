@@ -1,0 +1,9 @@
+.idea/
+member-portal.iml
+multiple-models-application/multiple-models-application.iml
+multiple-models-application/target/
+multiple-models-data/multiple-models-data.iml
+multiple-models-data/target/
+multiple-models-service/multiple-models-service.iml
+multiple-models-service/target/
+multiple-models.iml

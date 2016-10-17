@@ -1,4 +1,4 @@
-package com.zmannotes.spring.data.service;
+package com.zmannotes.spring.service;
 
 /**
  * Created by zman on 16/7/13.

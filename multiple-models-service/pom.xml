@@ -1,17 +1,48 @@
 <?xml version="1.0"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>com.zmannnotes.spring</groupId>
-    <artifactId>multiple-models</artifactId>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.zmannnotes.spring</groupId>
+        <artifactId>multiple-models</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <groupId>com.zmannotes.spring</groupId>
+    <artifactId>multiple-models-service</artifactId>
     <version>1.0-SNAPSHOT</version>
-  </parent>
-  <groupId>com.zmannotes.spring</groupId>
-  <artifactId>multiple-models-service</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  <name>multiple-models-service</name>
-  <url>http://maven.apache.org</url>
-  <dependencies>
-  </dependencies>
+    <name>multiple-models-service</name>
+    <url>http://maven.apache.org</url>
+
+    <dependencies>
+        <!-- spring -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+        <!-- test -->
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>1.2</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
 </project>
